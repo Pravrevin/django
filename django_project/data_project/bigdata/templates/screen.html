@@ -1,0 +1,74 @@
+
+{% block card %}
+{% load static %}
+<script src="{% static "js/jquery-1.11.1.js" %}"></script>
+<style>
+
+    .text{
+    padding:20px;
+    width:60%;
+    border: 1px solid gray;
+    margin-left:200px;
+    margin-top:200px;
+
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Screen Page</title>
+</head>
+<body>
+<div class="text">
+    <form  method="post" action="{% url 'screen' %}"  >{% csrf_token %}
+        <center><h4>Screen Page</h4></center>
+       <table style="width:100%">
+  <tr>
+    <td><th>Conid</th></td>
+    <td><input type="text" name="conid"></td>
+
+  </tr>
+  <tr>
+    <td><th>Conpassword</th></td>
+    <td><input type="text" name="conpassword"></td>
+
+  </tr>
+  <tr>
+    <td><th>Host</th></td>
+    <td><input type="text" name="host"></td>
+
+  </tr>
+  <tr>
+    <td><th>Port</th></td>
+    <td><input type="text" name="port"></td>
+
+  </tr>
+  <tr>
+    <td><th>Service Name</th></td>
+    <td><input type="text" name="service_name"></td>
+
+  </tr>
+  <tr>
+    <td><th>SQL Query</th></td>
+    <td><input type="text" name="sql_query"></td>
+
+  </tr><td ><div "></div></td>
+  <td> <input type="submit" value="next"></td>
+  </tr>
+</table>
+
+
+    </form>
+
+</div>
+</body>
+</html>
+
+{% endblock  %}
+
+
+
+
+<!--<script src="{% static "js/rango-jquery.js" %}"></script>-->
